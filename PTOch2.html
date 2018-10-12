@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTO CH2</title>
+</head>
+<body>
+        <h2>V2</h2>
+        <p>A simple program that calculates the PTO(Paid time off) for the corresponding amount of time the employee has worked in years. Returns amount of PTO in weeks.</p>
+    <!-- 1-4yrs = 5hrs
+    equal to or greater than 5yrs = 6hrs
+    equal to or greater than 10yrs = 7hrs -->
+    <ol>
+        <li>DISPLAY "How many years have you worked?"</li>
+        <li>INPUT YearsWorked</li>
+        <li>If YearsWorked &lt; 5 give PTO value of 5</li>
+        <li>If YearsWorked &gt; 5 give PTO value of 6</li>
+        <li>If YearsWorked &gt; 10 give PTO value of 7</li>
+        <li>TotalChecks = YearsWorked * 26</li>
+        <li>FinalPTO = TotalChecks / 40</li>
+    </ol>   
+    <p>How many years have you worked?</p>
+    <form action="#" onsubmit="ptoCalc()">
+        <input type="text" id="yearsWorked">
+        <button type="submit">Submit</button>
+        <p>Your hours Total to: <span id="insert"></span></p>
+    </form>
+    <script>
+        function ptoCalc() {
+            event.preventDefault();
+            var yearsWorked = document.getElementById("yearsWorked").value;
+            var insert = document.getElementById("insert");
+            var hours;
+            if (yearsWorked < 5) {
+                hours = 5;
+            } else if (yearsWorked < 10) {
+                hours = 6;
+            } else if (yearsWorked >= 10 ) {
+                hours = 7;
+            }
+            
+            console.log(hours);
+
+            var totalChecks = hours * 26;
+            console.log(totalChecks);
+            insert.innerHTML = totalChecks /40 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NET Pay Calculator</title>
+</head>
+<body>
+    <h1>NET Pay Program</h1>
+    <p>Simple NET pay calculator. It takes your GROSS Pay and then deducts Federal, State, FICA. It has the option to deduct any additional amount from your check. Then it displays your NET pay.</p>
+    <!--FED 15%-->
+    <!--STATE 5%-->
+    <!--FICA 7.62%-->
+    <!--IF ANY ADDITIONAL-->
+    <ol>
+        <li>START</li>
+        <li>DISPLAY "How much is your Gross Pay."</li>
+        <li>INPUT GrossPay</li>
+        <li>FED = GrossPay * .15</li>
+        <li>STATE = GrossPay * .05</li>
+        <li>FICA = GrossPay * .0762</li>
+        <li>NET = GrossPay - (FED + STATE + FICA)</li>
+        <li>DISPLAY "This is your NET Pay:" <b>NET</b></li>
+        <li>DISPLAY "Would you like to deduct any additional amount?"</li>
+        <li>If answer is yes DISPLAY TotalAdd</li>
+        <li>TotalAdd = NET - ADDITIONAL</li>
+        <li>Input ADDITIONAL</li>
+        <li>Else END</li>
+        <li>END</li>
+    </ol>
+    <p>Here is the NET Pay:.</p>
+<script src="netpayprogram.js"></script>
+
+<h1>PTO</h1>
+    <h2>Version 1</h2>
+    <ol>
+        <li>Display "How many paychecks have you recieved?"</li>
+        <li>Input var paychecks</li>
+        <li>Display "Ok you've made" paychecks "paychecks, which means your PTO is:"</li>
+        <li>Display (paychecks * 5)</li>
+    </ol>
+    
+
+    <h2>V2</h2>
+    <p>A simple program that calculates the PTO(Paid time off) for the corresponding amount of time the employee has worked in years. Returns amount of PTO in weeks.</p>
+<!-- 1-4yrs = 5hrs
+equal to or greater than 5yrs = 6hrs
+equal to or greater than 10yrs = 7hrs -->
+<ol>
+    <li>DISPLAY "How many years have you worked?"</li>
+    <li>INPUT YearsWorked</li>
+    <li>If YearsWorked &lt; 5 give PTO value of 5</li>
+    <li>If YearsWorked &gt; 5 give PTO value of 6</li>
+    <li>If YearsWorked &gt; 10 give PTO value of 7</li>
+    <li>TotalChecks = YearsWorked * 26</li>
+    <li>FinalPTO = TotalChecks / 40</li>
+</ol>   
+    <form>
+        <p>How many years have you worked?</p>
+        <form action="#" onsubmit="YearsWorked()">
+            <input type="text" name="#" id="inner">
+            <input type="submit" value="submit" >
+            <p>Your hours Total to: <span id="outter"></span></p>
+        </form>
+    </form>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2>V3</h2>
+    <p>A simple PTO(Paid Time Off) calculator that uses how many years you have worked to get correct PTO rate. Then use how many weeks you have worked so far this year to calculate total PTO to date. Then deduct any PTO that you have taken to date. Results can be returned in hours or days or weeks.</p>
+    <ol>
+        <li>DISPLAY "How many years have you worked?"</li>
+        <li>INPUT YearsWorked</li>
+        <li>If YearsWorked &lt; 5 give PTO value of 5</li>
+        <li>If YearsWorked &gt; 5 give PTO value of 6</li>
+        <li>If YearsWorked &gt; 10 give PTO value of 7</li>
+        <li>DISPLAY "How many weeks have you worked this year?"</li>
+        <li>INPUT Checks divided by 2.</li>
+        <li>Checks * PTO = FinalChecks</li>
+        <li>IF User chooses Hours then FinalChecks / 1.</li>
+        <li>IF User chooses Days then FinalChecks / 8.</li>
+        <li>IF User chooses Weeks then FinalChecks / 40.</li>
+        
+    </ol>
+
+
+
+
+
+
+
+
+
+
+
+    <h2>Simple Investment Calculator</h2>
+    <p>A simple investment calculator that takes an initial investment amount in dollars. Then accepts an interest rate between 2-7%. Then takes an additional amount of money for each term of the investment. Enter a investment term(ie. how long). Then specify that the term will be in years or months. Result will be your total interest earned and the total amount in your account.</p>
+    
+    
+    
+    <script src="calc.js"></script>
+<script src="netpayprogramch2.js"></script>
+</body>
+</html>
