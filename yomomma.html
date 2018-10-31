@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css"/>
+    <title>Yo Momma Joke Generator</title>
+    <style>
+        body{
+            color: white;
+            background-color:black;
+            text-align: center;
+            margin-top: 275px;
+            border-style: dotted;
+            font-size: 30px;
+        }
+        h1{
+            color: white;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body onload="jokeGenerator()">
+    <h1>YO MOMMA JOKE GENERATOR</h1>
+        <div id="output"></div>
+        <script>
+            function jokeGenerator() {
+                var jokes = ["Yo momma so stupid, when I told her that she lost her mind, she went looking for it.", "Yo momma’s so ugly she threw a boomerang and it refused to come back.", "Yo momma has so many teeth missing, that it looks like her tongue is in jail.", "Yo momma is like the sun, look at her too long and you'll go blind. ", "Yo momma so fat, when she went to KFC, she ordered a bucket of chicken, and when they asked what size, she said the one on the roof.", "Yo momma so fat not even Dora can explore her.", "Yo momma is so fat it took Nation Wide 15 years to get on her side.", "Yo momma so fat when she stepped on the scale it said-- To be continued.", "What does your mom and a slinky have in common? They aren’t much to look at, but you can’t help but crack a smile when you see then tumbling down the stairs.", "Your momma is so fat, scientists found a new planet called Heranus", "Yo momma is so ugly, she walked into a haunted house and walked out with a job application.", "Yo momma so stupid, that when she heard about cookies on the internet she ate her computer.", "Yo momma is so fat, her husband has to stand up in bed each morning to see if it’s daylight.", "Yo momma is so old that her bus pass is in hieroglyphics!!", "Yo momma is so fat she walked in front of the tv and I missed 3 commercials.", "Yo momma so stupid she stopped at a stop sign and waited for it to turn green.", "Yo momma is so fat it took me a bus and two trains just to get on her good side.", "Yo momma is so stupid she sold her car for gas money.", "Yo momma’s so fat the government forced her to wear tailights and blinkers so no one else would get hurt.", "Yo momma so fat she has more chins than a chinese phone book.", "Yo momma is teeth are so yellow I can’t believe it’s not butter.", "Yo momma is so fat that she makes Fat Albert look skinny."];
+                var output = document.getElementById("output");
+
+                output.textContent = jokes[generateRandom()]
+            }
+
+            function generateRandom() {
+                return Math.round(Math.random() * 21);
+            }
+        </script>
+    </ol>
+</body>
+</html>
